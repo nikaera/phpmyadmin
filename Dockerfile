@@ -19,5 +19,6 @@ ADD randomize_18.sh /root/randomize_18.sh
 RUN HASH=`sh /root/randomize_18.sh`; \
 	sed -i -e"s/{hash}/${HASH}/g" /etc/phpMyAdmin/config.inc.php
 RUN sed -i -e"s/{PHPMYADMIN_MYSQL_HOST}/${PHPMYADMIN_MYSQL_HOST:=mysql}/g" /etc/phpMyAdmin/config.inc.php
+RUN sed -i -e"s/{PHPMYADMIN_MYSQL_PORT}/${PHPMYADMIN_MYSQL_PORT:=3306}/g" /etc/phpMyAdmin/config.inc.php
 
 CMD httpd -k start; tail -f /var/log/httpd/error_log

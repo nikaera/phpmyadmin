@@ -25,7 +25,7 @@ $i = 0;
 // full server array, just define values you need to change.
 $i++;
 $cfg['Servers'][$i]['host']          = '{PHPMYADMIN_MYSQL_HOST}'; // MySQL hostname or IP address
-$cfg['Servers'][$i]['port']          = '';          // MySQL port - leave blank for default port
+$cfg['Servers'][$i]['port']          = '{PHPMYADMIN_MYSQL_PORT}';          // MySQL port - leave blank for default port
 $cfg['Servers'][$i]['socket']        = '';          // Path to the socket - leave blank for default socket
 $cfg['Servers'][$i]['connect_type']  = 'tcp';       // How to connect to MySQL server ('tcp' or 'socket')
 $cfg['Servers'][$i]['extension']     = 'mysqli';    // The php MySQL extension to use ('mysql' or 'mysqli')
